@@ -1,0 +1,122 @@
+:root {
+  --bg: #faf9f6;
+  --bg-raised: #ffffff;
+  --text: #1a2332;
+  --text-muted: #565f70;
+  --border: #e2e0d8;
+  --accent: #2c6e5c;
+  --accent-soft: #e7f0ec;
+  --warn-bg: #fdf3e3;
+  --warn-border: #e8c98a;
+  --warn-text: #6b4a12;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11151c;
+    --bg-raised: #171c25;
+    --text: #e9e7e0;
+    --text-muted: #9aa3b5;
+    --border: #2a3140;
+    --accent: #6fbfa4;
+    --accent-soft: #1c2b28;
+    --warn-bg: #2b2314;
+    --warn-border: #5a4620;
+    --warn-text: #e3c07f;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+}
+h1, h2 {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  text-wrap: balance;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 24px 96px; }
+
+.site-nav {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin: 0 0 36px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--border); font-size: .88rem;
+}
+.site-nav a { color: var(--text-muted); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
+.site-nav a[aria-current="page"] { font-weight: 600; }
+
+header.doc-header { margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.eyebrow {
+  text-transform: uppercase; letter-spacing: .08em; font-size: .75rem;
+  color: var(--accent); font-weight: 600; margin: 0 0 10px;
+}
+h1 { font-size: 2rem; margin: 0 0 8px; line-height: 1.2; }
+.meta { color: var(--text-muted); font-size: .92rem; margin: 0; }
+
+.tldr {
+  background: var(--accent-soft); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px 22px; margin: 0 0 40px;
+}
+.tldr h2 {
+  font-family: inherit; font-size: .95rem; margin: 0 0 10px;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--accent);
+}
+.tldr ul { margin: 0; padding-left: 1.15em; }
+.tldr li { margin-bottom: 6px; }
+.tldr li:last-child { margin-bottom: 0; }
+
+nav.toc {
+  margin: 0 0 44px; padding: 18px 22px; border: 1px solid var(--border);
+  border-radius: 10px; background: var(--bg-raised);
+}
+nav.toc p {
+  margin: 0 0 10px; font-size: .78rem; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--text-muted);
+}
+nav.toc ol { margin: 0; padding-left: 1.3em; columns: 2; column-gap: 24px; font-size: .92rem; }
+nav.toc li { margin-bottom: 6px; }
+nav.toc a { color: var(--text); text-decoration: none; }
+nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+section { margin-bottom: 40px; scroll-margin-top: 20px; }
+h2.section-title { font-size: 1.3rem; display: flex; align-items: baseline; gap: 10px; margin: 0 0 16px; }
+h2.section-title .num { color: var(--accent); font-family: inherit; font-size: .95rem; font-weight: 700; }
+h3 { font-size: 1.02rem; margin: 22px 0 8px; }
+p { margin: 0 0 14px; }
+ul, ol.plain { margin: 0 0 14px; padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); }
+
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: .92rem; }
+caption { text-align: left; color: var(--text-muted); font-size: .82rem; margin-bottom: 6px; }
+th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: top; }
+th { background: var(--bg-raised); font-weight: 600; font-size: .85rem; }
+
+.callout {
+  border-left: 3px solid var(--accent); background: var(--accent-soft);
+  padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: .94rem;
+}
+.callout.warn { border-left-color: var(--warn-border); background: var(--warn-bg); color: var(--warn-text); }
+.callout p:last-child { margin-bottom: 0; }
+
+.doc-list { list-style: none; padding: 0; margin: 0 0 14px; }
+.doc-list li { margin-bottom: 12px; }
+.doc-list a {
+  display: block; padding: 16px 18px; border: 1px solid var(--border);
+  border-radius: 10px; background: var(--bg-raised); color: var(--text); text-decoration: none;
+}
+.doc-list a:hover { border-color: var(--accent); }
+.doc-list strong { display: block; color: var(--accent); }
+.doc-list span { font-size: .92rem; color: var(--text-muted); }
+
+footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: .88rem; }
+
+@media (max-width: 520px) {
+  .wrap { padding: 24px 18px 72px; }
+  h1 { font-size: 1.6rem; }
+  nav.toc ol { columns: 1; }
+}

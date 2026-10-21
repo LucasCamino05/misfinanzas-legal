@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — MisFinanzas</title>
+<meta name="description" content="Política de privacidad de la app MisFinanzas: qué datos se recolectan, para qué, con quién se comparten y cómo ejercer tus derechos.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="site-nav" aria-label="Documentos">
+    <a href="index.html">Inicio</a>
+    <a href="terms.html">Términos y Condiciones</a>
+    <a href="privacy-policy.html" aria-current="page">Política de Privacidad</a>
+    <a href="delete-account.html">Eliminar mi cuenta</a>
+  </nav>
+
+  <header class="doc-header">
+    <p class="eyebrow">MisFinanzas</p>
+    <h1>Política de Privacidad</h1>
+    <p class="meta">Última actualización: 21 de octubre de 2026 · Contacto: <a href="mailto:lucascamino05@gmail.com">lucascamino05@gmail.com</a></p>
+  </header>
+
+  <div class="tldr">
+    <h2>En resumen</h2>
+    <ul>
+      <li>MisFinanzas guarda tus cuentas, movimientos, inversiones y datos de perfil para que puedas usar la app entre dispositivos. No vendemos tus datos ni los usamos para publicidad.</li>
+      <li>No usamos SDKs de publicidad, analítica ni reporte de fallos de terceros.</li>
+      <li>Cada fila de tu información está aislada por usuario en la base de datos (Row Level Security): ningún otro usuario puede leerla.</li>
+      <li>Tu huella o tu rostro, si activás el bloqueo biométrico, nunca salen de tu teléfono: la app solo recibe un "sí" o un "no" del sistema operativo.</li>
+      <li>Podés eliminar tu cuenta desde Configuración. Ojo: la baja es "lógica" (los datos se ocultan pero no se borran de inmediato). Para un borrado definitivo, escribinos (ver sección 7).</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Índice">
+    <p>Índice</p>
+    <ol>
+      <li><a href="#responsable">Quién es responsable</a></li>
+      <li><a href="#que-recolectamos">Qué información recolectamos</a></li>
+      <li><a href="#para-que">Para qué la usamos</a></li>
+      <li><a href="#con-quien">Con quién la compartimos</a></li>
+      <li><a href="#donde-como">Dónde y cómo se almacena</a></li>
+      <li><a href="#permisos">Permisos y bloqueo biométrico</a></li>
+      <li><a href="#retencion">Conservación y eliminación</a></li>
+      <li><a href="#derechos">Tus derechos</a></li>
+      <li><a href="#menores">Menores de edad</a></li>
+      <li><a href="#cambios">Cambios a esta política</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <section id="responsable">
+    <h2 class="section-title"><span class="num">1</span> Quién es responsable</h2>
+    <p>MisFinanzas es una aplicación de finanzas personales para Android, desarrollada y operada de forma independiente. El responsable del tratamiento de tus datos es el desarrollador de la app, contactable en <a href="mailto:lucascamino05@gmail.com">lucascamino05@gmail.com</a>.</p>
+    <p>MisFinanzas es una herramienta de registro y seguimiento de tus propias finanzas. No es un banco ni un procesador de pagos, no mueve dinero y no se conecta a tus cuentas bancarias: todo lo que ves en la app lo cargás vos.</p>
+    <p>El uso de la app se rige además por nuestros <a href="terms.html">Términos y Condiciones</a>.</p>
+  </section>
+
+  <section id="que-recolectamos">
+    <h2 class="section-title"><span class="num">2</span> Qué información recolectamos</h2>
+
+    <h3>Cuenta y autenticación</h3>
+    <ul>
+      <li>Si te registrás con email y contraseña: tu email. La contraseña la gestiona Supabase Auth, que la guarda con hash criptográfico; nosotros nunca la vemos ni la almacenamos.</li>
+      <li>Si ingresás con Google: el identificador de tu cuenta de Google y el email asociado, que Supabase Auth recibe a través del token de Google (puede incluir también tu nombre y foto de perfil).</li>
+      <li>Un token de sesión, guardado cifrado en tu dispositivo (ver sección 5).</li>
+    </ul>
+
+    <h3>Datos de perfil (opcionales)</h3>
+    <ul>
+      <li>Nombre y apellido, si los cargás en Configuración.</li>
+      <li>Número de teléfono, si decidís agregarlo. Se guarda en tu perfil. La verificación del teléfono por WhatsApp está desactivada en la versión actual de la app (ver sección 4).</li>
+    </ul>
+
+    <h3>Datos financieros que ingresás vos</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>Todo lo de esta tabla lo escribís vos en la app; no lo inferimos ni lo obtenemos de otro lado.</caption>
+        <thead><tr><th>Categoría</th><th>Qué incluye</th></tr></thead>
+        <tbody>
+          <tr><td>Cuentas</td><td>Nombre, tipo, moneda, color, saldo actual y saldo inicial.</td></tr>
+          <tr><td>Movimientos</td><td>Monto, tipo (ingreso, gasto, transferencia), cuenta, categoría, descripción y fecha.</td></tr>
+          <tr><td>Categorías</td><td>Nombre, color e ícono, incluidas las que creás vos.</td></tr>
+          <tr><td>Presupuestos</td><td>Categoría, monto, período y fecha de inicio.</td></tr>
+          <tr><td>Tarjetas de crédito</td><td>Descripción del gasto, monto total, cuotas y pagos registrados.</td></tr>
+          <tr><td>Movimientos recurrentes</td><td>Cuenta, categoría, monto, frecuencia y próxima fecha de vencimiento.</td></tr>
+          <tr><td>Inversiones</td><td>Tipo, nombre, símbolo (ticker), cantidad, precio y fecha de compra, valor manual y notas.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Datos técnicos</h3>
+    <ul>
+      <li>Marcas de tiempo internas de sincronización, para mantener tus dispositivos al día.</li>
+      <li>Un valor aleatorio generado en tu dispositivo para evitar colisiones técnicas al crear registros sin conexión. No está vinculado a tu identidad.</li>
+      <li>Preferencias de la app (tema, moneda de visualización, bloqueo biométrico activado o no), que se guardan solo en tu dispositivo.</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Lo que no recolectamos:</strong> ubicación, contactos, fotos ni archivos de tu dispositivo, identificador de publicidad, ni datos de uso a través de analítica o publicidad. MisFinanzas no integra SDKs de ese tipo.</p>
+    </div>
+  </section>
+
+  <section id="para-que">
+    <h2 class="section-title"><span class="num">3</span> Para qué usamos tu información</h2>
+    <ul>
+      <li>Para crear tu cuenta, iniciar sesión y recuperar tu contraseña.</li>
+      <li>Para guardar tus datos y sincronizarlos entre tus dispositivos.</li>
+      <li>Para las funciones que activás vos: bloqueo biométrico y notificaciones de movimientos recurrentes vencidos.</li>
+      <li>Para mostrar cotizaciones de moneda y de activos (ver sección 4) y valuar tus saldos e inversiones.</li>
+    </ul>
+    <p>No usamos tus datos para publicidad ni para elaborar perfiles, y no los vendemos ni los cedemos a nadie con fines comerciales.</p>
+  </section>
+
+  <section id="con-quien">
+    <h2 class="section-title"><span class="num">4</span> Con quién la compartimos</h2>
+    <p>Solo intervienen terceros que son necesarios para que la app funcione:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Proveedor</th><th>Para qué</th><th>Qué recibe</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Base de datos en la nube, autenticación y sincronización.</td>
+            <td>Todos los datos de las secciones 2 (cuenta, perfil y datos financieros).</td>
+          </tr>
+          <tr>
+            <td>Google</td>
+            <td>Inicio de sesión con Google, si elegís esa opción.</td>
+            <td>Google participa en el inicio de sesión. No recibe tus datos financieros.</td>
+          </tr>
+          <tr>
+            <td>dolarapi.com</td>
+            <td>Cotización del dólar oficial.</td>
+            <td>Un pedido de cotización. No enviamos datos tuyos.</td>
+          </tr>
+          <tr>
+            <td>data912.com</td>
+            <td>Precios de CEDEARs y acciones argentinas.</td>
+            <td>Un pedido de la lista pública de precios. No enviamos datos tuyos.</td>
+          </tr>
+          <tr>
+            <td>CoinGecko</td>
+            <td>Precios de criptomonedas.</td>
+            <td>El identificador de la criptomoneda que consultás (por ejemplo, "bitcoin"). No enviamos datos de tu cuenta.</td>
+          </tr>
+          <tr>
+            <td>Twilio (vía WhatsApp)</td>
+            <td>Envío de un código para verificar un teléfono.</td>
+            <td>Tu número de teléfono, solo si esta función se habilita. Hoy está desactivada en la app.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Como en cualquier conexión a internet, los servicios de cotizaciones pueden ver tu dirección IP y los datos técnicos habituales de la conexión, y se rigen por sus propias políticas de privacidad.</p>
+    <p>También podemos divulgar información si una autoridad competente lo exige por ley.</p>
+  </section>
+
+  <section id="donde-como">
+    <h2 class="section-title"><span class="num">5</span> Dónde y cómo se almacena</h2>
+    <ul>
+      <li><strong>Ubicación:</strong> los datos se almacenan en servidores de Supabase en la región de América del Sur (São Paulo, Brasil). Esto implica una transferencia internacional de datos desde Argentina u otros países de residencia.</li>
+      <li><strong>En tránsito:</strong> la comunicación entre la app y los servidores viaja cifrada con HTTPS/TLS.</li>
+      <li><strong>Aislamiento entre usuarios:</strong> todas las tablas con datos de usuarios tienen Row Level Security activada, de modo que la propia base de datos limita cada fila a su dueño autenticado.</li>
+      <li><strong>En tu dispositivo:</strong> la app guarda una copia local para funcionar sin conexión. Esa base de datos está cifrada con SQLCipher, y su clave y tu sesión se guardan con cifrado respaldado por el Android Keystore.</li>
+      <li><strong>Copias de seguridad de Android:</strong> la app tiene desactivado el backup automático del sistema, para que la base local no se copie fuera del dispositivo sin pasar por tu cuenta.</li>
+    </ul>
+    <p>Ningún sistema es infalible: aplicamos estas medidas razonables, pero no podemos garantizar seguridad absoluta. Mantené tu dispositivo bloqueado y usá una contraseña fuerte.</p>
+  </section>
+
+  <section id="permisos">
+    <h2 class="section-title"><span class="num">6</span> Permisos y bloqueo biométrico</h2>
+    <ul>
+      <li><strong>Internet:</strong> necesario para sincronizar, iniciar sesión y consultar cotizaciones.</li>
+      <li><strong>Notificaciones:</strong> opcional (Android 13 o superior). Se usan para avisarte de movimientos recurrentes vencidos. Se generan en tu propio dispositivo; no usamos un servicio de notificaciones push.</li>
+    </ul>
+    <p>Si activás el bloqueo por huella o reconocimiento facial, la verificación la hace por completo el sistema operativo de tu teléfono. <strong>MisFinanzas nunca recibe, ve ni guarda tu huella ni tu rostro</strong>: solo sabe si la verificación fue exitosa. Lo único que guarda es si tenés la función activada.</p>
+  </section>
+
+  <section id="retencion">
+    <h2 class="section-title"><span class="num">7</span> Conservación y eliminación</h2>
+    <p>Conservamos tus datos mientras tu cuenta esté activa. Si usás <strong>Eliminar cuenta</strong> en Configuración:</p>
+    <ul>
+      <li>Todos tus registros financieros se marcan como eliminados y dejan de mostrarse en la app, en todos tus dispositivos.</li>
+      <li>Tu cuenta queda marcada como dada de baja. Si volvés a iniciar sesión, la app te ofrece recuperar tus datos o empezar de cero.</li>
+      <li>Esta baja es lógica: los datos y el usuario de acceso <strong>permanecen almacenados</strong> en nuestros servidores y hoy no existe un plazo automático de borrado definitivo.</li>
+    </ul>
+    <div class="callout warn">
+      <p>Si querés que se eliminen de forma definitiva tus datos y tu usuario de acceso, seguí los pasos de <a href="delete-account.html">Eliminar mi cuenta</a> o escribinos a <a href="mailto:lucascamino05@gmail.com">lucascamino05@gmail.com</a> desde el email de tu cuenta. Lo gestionamos manualmente y te confirmamos cuando esté hecho.</p>
+    </div>
+    <p>Si cerrás sesión o desinstalás la app, la copia local de tu dispositivo se elimina al desinstalar; los datos en la nube se conservan según lo descrito arriba.</p>
+  </section>
+
+  <section id="derechos">
+    <h2 class="section-title"><span class="num">8</span> Tus derechos</h2>
+    <p>Podés ejercer en cualquier momento los siguientes derechos:</p>
+    <ul>
+      <li><strong>Acceso:</strong> tus datos financieros y de perfil son visibles dentro de la app.</li>
+      <li><strong>Rectificación:</strong> podés editar tu perfil, cuentas, categorías, movimientos e inversiones desde la app.</li>
+      <li><strong>Supresión:</strong> desde Configuración (baja lógica) o escribiéndonos para el borrado definitivo.</li>
+      <li><strong>Copia de tus datos:</strong> la app todavía no tiene una función de exportación; si necesitás una copia completa, pedínosla por email.</li>
+      <li><strong>Retirar tu consentimiento:</strong> en la práctica, eliminando tu cuenta.</li>
+    </ul>
+    <p>Respondemos los pedidos por email dentro de un plazo razonable. Si vivís en Argentina, la Ley 25.326 de Protección de los Datos Personales te reconoce estos derechos, y la Agencia de Acceso a la Información Pública (AAIP) es el órgano de control ante el cual podés presentar reclamos.</p>
+  </section>
+
+  <section id="menores">
+    <h2 class="section-title"><span class="num">9</span> Menores de edad</h2>
+    <p>MisFinanzas es para mayores de 18 años (ver los <a href="terms.html#edad">Términos y Condiciones</a>) y no recolectamos a sabiendas información de menores de esa edad. Si creés que un menor nos entregó datos personales, escribinos y los eliminaremos.</p>
+  </section>
+
+  <section id="cambios">
+    <h2 class="section-title"><span class="num">10</span> Cambios a esta política</h2>
+    <p>Si cambiamos esta política de forma significativa (por ejemplo, al sumar una función que recolecte un dato nuevo o al habilitar la verificación por WhatsApp) actualizaremos la fecha de arriba y, cuando corresponda, te avisaremos dentro de la app.</p>
+  </section>
+
+  <footer id="contacto">
+    <p><strong>Contacto.</strong> Para cualquier consulta sobre esta política o tus datos personales, escribinos a <a href="mailto:lucascamino05@gmail.com">lucascamino05@gmail.com</a>.</p>
+    <p>© 2026 MisFinanzas. Todos los derechos reservados.</p>
+  </footer>
+
+</div>
+</body>
+</html>
